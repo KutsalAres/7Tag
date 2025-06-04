@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gizli Bilgi</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      text-align: center;
+      margin-top: 100px;
+      font-family: sans-serif;
+    }
+    #scary {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <h1>Yükleniyor...</h1>
+
+  <img id="scary" src="scary.png" />
+  <audio id="scream" src="scream.mp3"></audio>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("scary").style.display = "block";
+      document.getElementById("scream").play();
+    }, 3000); // 3 saniye sonra jumpscare yapar
+  </script>
+</body>
+</html>
